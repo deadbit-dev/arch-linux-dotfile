@@ -1,0 +1,22 @@
+# ~/.config/starship.toml
+
+[character]
+error_symbol = "[✖](bold red) "
+
+[directory]
+read_only = " "
+
+[package]
+symbol = " "
+
+[python]
+format = "[$symbol$version]($style) "
+symbol = " "
+style = "bold green"
+pyenv_version_name = true
+
+[golang]
+symbol = " "
+
+[lua]
+symbol = ""
