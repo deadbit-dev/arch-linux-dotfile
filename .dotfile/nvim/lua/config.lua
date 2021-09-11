@@ -1,17 +1,17 @@
 -----------------------------------------------------------
 -- Neovim settings
---- General Neovim settings
+-- General Neovim settings
 -----------------------------------------------------------
 
 -----------------------------------------------------------
 -- Neovim API aliases
 -----------------------------------------------------------
---local map = vim.api.nvim_set_keymap  -- set global keymap
+--local map = vim.api.nvim_set_keymap     -- set global keymap
 local cmd = vim.cmd     				-- execute Vim commands
-local exec = vim.api.nvim_exec 	-- execute Vimscript
+local exec = vim.api.nvim_exec 	        -- execute Vimscript
 local fn = vim.fn       				-- call Vim functions
 local g = vim.g         				-- global variables
-local opt = vim.opt         		-- global/buffer/windows-scoped options
+local opt = vim.opt         		    -- global/buffer/windows-scoped options
 
 -----------------------------------------------------------
 -- General
@@ -26,9 +26,9 @@ opt.swapfile = false          -- don't use swapfile
 -----------------------------------------------------------
 opt.syntax = 'enable'         -- enable syntax highlighting
 opt.number = true             -- show line number
-opt.showmatch = true          -- highlight matching parenthesis
+--opt.showmatch = true        -- highlight matching parenthesis
 opt.foldmethod = 'marker'     -- enable folding (default 'foldmarker')
---opt.colorcolumn = '80'        -- line lenght marker at 80 columns
+--opt.colorcolumn = '80'      -- line lenght marker at 80 columns
 opt.splitright = true         -- vertical split to the right
 opt.splitbelow = true         -- orizontal split to the bottom
 opt.ignorecase = true         -- ignore case letters when search
@@ -38,12 +38,12 @@ opt.smartcase = true          -- ignore lowercase for the whole pattern
 cmd[[au BufWritePre * :%s/\s\+$//e]]
 
 -- highlight on yank
-exec([[
-  augroup YankHighlight
-    autocmd!
-    autocmd TextYankPost * silent! lua vim.highlight.on_yank{higroup="IncSearch", timeout=700}
-  augroup end
-]], false)
+--exec([[
+--  augroup YankHighlight
+--    autocmd!
+--    autocmd TextYankPost * silent! lua vim.highlight.on_yank{higroup="IncSearch", timeout=700}
+--  augroup end
+--]], false)
 
 -----------------------------------------------------------
 -- Memory, CPU
@@ -56,10 +56,8 @@ opt.synmaxcol = 240       -- max column for syntax highlight
 -----------------------------------------------------------
 -- Colorscheme
 -----------------------------------------------------------
---opt.termguicolors = true      -- enable 24-bit RGB colors
---opt.background = 'dark'
+cmd[[colorscheme tokyonight]]
 
-require('github-theme').setup()
 -----------------------------------------------------------
 -- Tabs, indent
 -----------------------------------------------------------
@@ -79,16 +77,8 @@ cmd[[
   autocmd FileType xml,html,xhtml,css,scss,javascript,lua,yaml setlocal shiftwidth=2 tabstop=2
 ]]
 
--- IndentLine
---g.indentLine_setColors = 0  -- set indentLine color
-g.indentLine_char = '|'       -- set indentLine character
-
--- disable IndentLine for markdown files (avoid concealing)
-cmd[[autocmd FileType markdown let g:indentLine_enabled=0]]
-
 -----------------------------------------------------------
 -- Autocompletion
 -----------------------------------------------------------
-opt.completeopt = 'menuone,noselect,noinsert' -- completion options
-opt.shortmess = 'c' 	-- don't show completion messages
-
+opt.completeopt = 'menuone,noselect,noinsert'   -- completion options
+opt.shortmess = 'c' 	                        -- don't show completion messages
