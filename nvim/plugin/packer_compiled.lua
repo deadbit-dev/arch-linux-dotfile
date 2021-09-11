@@ -69,9 +69,13 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
-  ["cmp-buffer"] = {
+  ["bufferline.nvim"] = {
     loaded = true,
-    path = "/home/deadbit/.local/share/nvim/site/pack/packer/start/cmp-buffer"
+    path = "/home/deadbit/.local/share/nvim/site/pack/packer/start/bufferline.nvim"
+  },
+  ["cmp-nvim-lsp"] = {
+    loaded = true,
+    path = "/home/deadbit/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp"
   },
   ["lualine.nvim"] = {
     loaded = true,
@@ -98,21 +102,12 @@ _G.packer_plugins = {
     path = "/home/deadbit/.local/share/nvim/site/pack/packer/start/packer.nvim"
   },
   ["tokyonight.nvim"] = {
-    config = { "\27LJ\1\2¿\2\0\0\2\0\v\0\0254\0\0\0007\0\1\0%\1\3\0:\1\2\0004\0\0\0007\0\1\0)\1\2\0:\1\4\0004\0\0\0007\0\1\0)\1\2\0:\1\5\0004\0\0\0007\0\1\0)\1\2\0:\1\6\0004\0\0\0007\0\1\0003\1\b\0:\1\a\0004\0\0\0007\0\1\0003\1\n\0:\1\t\0G\0\1\0\1\0\2\nerror\f#ff0000\thint\vorange\22tokyonight_colors\1\5\0\0\aqf\15vista_kind\rterminal\vpacker\24tokyonight_sidebars tokyonight_italic_functions#tokyonight_transparent_sidebar\27tokyonight_transparent\nnight\21tokyonight_style\6g\bvim\0" },
     loaded = true,
     path = "/home/deadbit/.local/share/nvim/site/pack/packer/start/tokyonight.nvim"
-  },
-  ["vim-vsnip"] = {
-    loaded = true,
-    path = "/home/deadbit/.local/share/nvim/site/pack/packer/start/vim-vsnip"
   }
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: tokyonight.nvim
-time([[Config for tokyonight.nvim]], true)
-try_loadstring("\27LJ\1\2¿\2\0\0\2\0\v\0\0254\0\0\0007\0\1\0%\1\3\0:\1\2\0004\0\0\0007\0\1\0)\1\2\0:\1\4\0004\0\0\0007\0\1\0)\1\2\0:\1\5\0004\0\0\0007\0\1\0)\1\2\0:\1\6\0004\0\0\0007\0\1\0003\1\b\0:\1\a\0004\0\0\0007\0\1\0003\1\n\0:\1\t\0G\0\1\0\1\0\2\nerror\f#ff0000\thint\vorange\22tokyonight_colors\1\5\0\0\aqf\15vista_kind\rterminal\vpacker\24tokyonight_sidebars tokyonight_italic_functions#tokyonight_transparent_sidebar\27tokyonight_transparent\nnight\21tokyonight_style\6g\bvim\0", "config", "tokyonight.nvim")
-time([[Config for tokyonight.nvim]], false)
 if should_profile then save_profiles() end
 
 end)
