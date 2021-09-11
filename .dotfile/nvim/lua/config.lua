@@ -26,7 +26,7 @@ opt.swapfile = false          -- don't use swapfile
 -----------------------------------------------------------
 opt.syntax = 'enable'         -- enable syntax highlighting
 opt.number = true             -- show line number
---opt.showmatch = true        -- highlight matching parenthesis
+opt.showmatch = true          -- highlight matching parenthesis
 opt.foldmethod = 'marker'     -- enable folding (default 'foldmarker')
 --opt.colorcolumn = '80'      -- line lenght marker at 80 columns
 opt.splitright = true         -- vertical split to the right
@@ -38,12 +38,12 @@ opt.smartcase = true          -- ignore lowercase for the whole pattern
 cmd[[au BufWritePre * :%s/\s\+$//e]]
 
 -- highlight on yank
---exec([[
---  augroup YankHighlight
---    autocmd!
---    autocmd TextYankPost * silent! lua vim.highlight.on_yank{higroup="IncSearch", timeout=700}
---  augroup end
---]], false)
+exec([[
+  augroup YankHighlight
+    autocmd!
+    autocmd TextYankPost * silent! lua vim.highlight.on_yank{higroup="IncSearch", timeout=700}
+  augroup end
+]], false)
 
 -----------------------------------------------------------
 -- Memory, CPU
@@ -56,6 +56,13 @@ opt.synmaxcol = 240       -- max column for syntax highlight
 -----------------------------------------------------------
 -- Colorscheme
 -----------------------------------------------------------
+g.tokyonight_style = "night"
+g.tokyonight_transparent = true
+g.tokyonight_transparent_sidebar = true
+g.tokyonight_italic_functions = true
+g.tokyonight_sidebars = { "qf", "vista_kind", "terminal", "packer" }
+g.tokyonight_colors = { hint = "orange", error = "#ff0000" }
+
 cmd[[colorscheme tokyonight]]
 
 -----------------------------------------------------------
