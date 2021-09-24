@@ -3,7 +3,7 @@ require('packer').startup(function()
   use 'kyazdani42/nvim-web-devicons'
   use 'folke/tokyonight.nvim'
   use 'hoob3rt/lualine.nvim'
-  use 'akinsho/bufferline.nvim'
+--  use 'akinsho/bufferline.nvim'
   use 'kyazdani42/nvim-tree.lua'
   use 'neovim/nvim-lspconfig'
   use 'hrsh7th/nvim-cmp'
