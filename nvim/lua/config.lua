@@ -24,7 +24,7 @@ opt.swapfile = false          -- don't use swapfile
 -- Neovim UI
 -----------------------------------------------------------
 opt.syntax = 'enable'         -- enable syntax highlighting
-opt.number = true             -- show line number
+opt.relativenumber = true             -- show line number
 opt.showmatch = true          -- highlight matching parenthesis
 opt.foldmethod = 'marker'     -- enable folding (default 'foldmarker')
 opt.splitright = true         -- vertical split to the right
