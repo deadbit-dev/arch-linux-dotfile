@@ -50,7 +50,8 @@ map('n', 'K', '<cmd>lua vim .lsp.buf.hover()<CR>', default_opts)
 -----------------------------------------------------------
 -- Plugins shortcuts:
 -----------------------------------------------------------
--- nvim-tree
-map('n', '<C-n>', ':NvimTreeToggle<CR>', default_opts)       -- open/close
-map('n', '<leader>r', ':NvimTreeRefresh<CR>', default_opts)  -- refresh
-map('n', '<leader>n', ':NvimTreeFindFile<CR>', default_opts) -- search file
+-- Telescope
+map('n', '<leader>ff', '<cmd>Telescope find_files<cr>', {noremap = true})
+map('n', '<leader>fg', '<cmd>Telescope live_grep<cr>', {noremap = true})
+map('n', '<leader>fb', '<cmd>Telescope buffers<cr>', {noremap = true})
+map('n', '<leader>fh', '<cmd>Telescope help_tags<cr>', {noremap = true})

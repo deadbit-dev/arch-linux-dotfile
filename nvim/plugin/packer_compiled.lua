@@ -69,10 +69,6 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
-  ["bufferline.nvim"] = {
-    loaded = true,
-    path = "/home/deadbit/.local/share/nvim/site/pack/packer/start/bufferline.nvim"
-  },
   ["cmp-nvim-lsp"] = {
     loaded = true,
     path = "/home/deadbit/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp"
@@ -89,10 +85,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/deadbit/.local/share/nvim/site/pack/packer/start/nvim-lspconfig"
   },
-  ["nvim-tree.lua"] = {
-    loaded = true,
-    path = "/home/deadbit/.local/share/nvim/site/pack/packer/start/nvim-tree.lua"
-  },
   ["nvim-web-devicons"] = {
     loaded = true,
     path = "/home/deadbit/.local/share/nvim/site/pack/packer/start/nvim-web-devicons"
@@ -100,6 +92,14 @@ _G.packer_plugins = {
   ["packer.nvim"] = {
     loaded = true,
     path = "/home/deadbit/.local/share/nvim/site/pack/packer/start/packer.nvim"
+  },
+  ["plenary.nvim"] = {
+    loaded = true,
+    path = "/home/deadbit/.local/share/nvim/site/pack/packer/start/plenary.nvim"
+  },
+  ["telescope.nvim"] = {
+    loaded = true,
+    path = "/home/deadbit/.local/share/nvim/site/pack/packer/start/telescope.nvim"
   },
   ["tokyonight.nvim"] = {
     loaded = true,

@@ -6,7 +6,6 @@
 -----------------------------------------------------------
 -- Neovim API aliases
 -----------------------------------------------------------
---local map = vim.api.nvim_set_keymap     -- set global keymap
 local cmd = vim.cmd     				-- execute Vim commands
 local exec = vim.api.nvim_exec 	        -- execute Vimscript
 local fn = vim.fn       				-- call Vim functions
@@ -28,7 +27,6 @@ opt.syntax = 'enable'         -- enable syntax highlighting
 opt.number = true             -- show line number
 opt.showmatch = true          -- highlight matching parenthesis
 opt.foldmethod = 'marker'     -- enable folding (default 'foldmarker')
---opt.colorcolumn = '80'      -- line lenght marker at 80 columns
 opt.splitright = true         -- vertical split to the right
 opt.splitbelow = true         -- orizontal split to the bottom
 opt.ignorecase = true         -- ignore case letters when search
