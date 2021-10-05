@@ -7,11 +7,9 @@
 
 alias ls='ls --color=auto'
 alias la='ls --color=auto -a'
+alias ll='ls --color=auto -al'
 alias python='python3'
-alias vim='nvim'
 
-if [ -z "$TMUX" ]; then
-    tmux attach || tmux 
-fi
+#export TERM='xterm-256color'
 
-eval  "$(starship init bash )" 
+eval "$(starship init bash )"
