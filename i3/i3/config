@@ -1,0 +1,121 @@
+#################################
+#            Variable           #
+#################################
+
+set $mod Mod1
+
+# workspaces
+set $ws1 1
+set $ws2 2
+set $ws3 3
+set $ws4 4
+set $ws5 5
+set $ws6 6
+set $ws7 7
+set $ws8 8
+
+#################################
+#            General            #
+#################################
+
+floating_modifier $mod
+for_window [urgent=latest] focus
+
+# Border window
+new_window pixel 0
+
+# Padding window
+gaps inner 15
+gaps top 50
+#gaps vertical 20
+smart_gaps on
+
+#################################
+#            BindKey            #
+#################################
+
+# Launch app
+bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+d exec --no-startup-id dmenu_run
+bindsym Print exec scrot -q 100 -c ~/Pictures/'Screen Shots'/screenshot.png
+
+# Change focus
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+
+# Move window
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
+
+# Kill window
+bindsym $mod+Shift+q kill
+
+# Change workspace
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+Tab workspace next
+
+# Move window between workspace
+bindsym $mod+Shift+1 move container to workspace $ws1; workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2; workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3; workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4; workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5; workspace $ws5
+bindsym $mod+Shift+Tab move container to workspace next; workspace next
+
+
+# Sound
+bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -c 0 -q set Master 2dB+ unmute
+bindsym XF86AudioLowerVolume exec --no-startup-id amixer -c 0 -q set Master 2db- unmute
+bindsym XF86AudioMute exec --no-startup-id amixer -q set Master toggle
+
+# Layout
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+bindsym $mod+f fullscreen toggle
+bindsym $mod+Shift+space floating toggle
+
+# i3
+bindsym $mod+Shift+c reload
+bindsym $mod+Shift+r restart
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+
+#################################
+#            Autostart          #
+#################################
+
+exec --no-startup-id feh --bg-scale ~/Pictures/Wallapers/wall_1.jpg
+exec --no-startup-id picom --config ~/.config/picom/picom.conf
+exec --no-startup-id nm-applet
+exec --no-startup-id clipit
+exec_always --no-startup-id fix_xcursor
+
+#################################
+#	    i3status		#
+#################################				
+
+bar {
+    status_command i3status --config ~/.config/i3/i3status.conf
+    position top
+    output primary
+    tray_output none
+    font pango:FiraCode Nerd Font 9
+    separator_symbol ❬
+    colors {
+        background #041124
+        statusline #4998fd 
+	separator  #4998fd
+
+        focused_workspace  #00002A #4998fd #041124
+        active_workspace   #ffffff #ffffff #ffffff
+        inactive_workspace #041124 #041124 #4998fd
+        urgent_workspace   #ffffff #ffffff #ffffff
+    }
+}
