@@ -1,5 +1,6 @@
 # arch-linux-dotfile
-It's my configurations Linux.
+![screenshot_237](https://user-images.githubusercontent.com/35998496/149618370-90eb6e3c-07cb-4e94-8f19-e86d48212f46.png)
+![screenshot_065](https://user-images.githubusercontent.com/35998496/149618459-29ef1f84-1777-4578-a2cb-9e82ef206925.png)
 ### Modules:
 - [Fira Code Nerd Font](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/FiraCode)
 Any font [Nerd](https://www.nerdfonts.com/)
